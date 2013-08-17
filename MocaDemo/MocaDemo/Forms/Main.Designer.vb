@@ -40,6 +40,10 @@ Partial Class Main
 		Me.btnClear = New System.Windows.Forms.Button()
 		Me.DataBinder2 = New Moca.Demo.Win.Win.DataBinder(Me.components)
 		Me.btnCancel = New System.Windows.Forms.Button()
+		Me.txtSearchCode = New System.Windows.Forms.TextBox()
+		Me.Label5 = New System.Windows.Forms.Label()
+		Me.txtSearchID = New System.Windows.Forms.TextBox()
+		Me.Label6 = New System.Windows.Forms.Label()
 		CType(Me.dgvResults, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
@@ -63,17 +67,18 @@ Partial Class Main
 		Me.dgvResults.AllowUserToAddRows = False
 		Me.dgvResults.AllowUserToDeleteRows = False
 		Me.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.dgvResults.Location = New System.Drawing.Point(224, 9)
+		Me.dgvResults.Location = New System.Drawing.Point(12, 51)
 		Me.dgvResults.Name = "dgvResults"
 		Me.dgvResults.ReadOnly = True
 		Me.dgvResults.RowTemplate.Height = 21
-		Me.dgvResults.Size = New System.Drawing.Size(355, 174)
+		Me.dgvResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+		Me.dgvResults.Size = New System.Drawing.Size(327, 134)
 		Me.dgvResults.TabIndex = 1
 		'
 		'Label1
 		'
 		Me.Label1.AutoSize = True
-		Me.Label1.Location = New System.Drawing.Point(12, 9)
+		Me.Label1.Location = New System.Drawing.Point(354, 11)
 		Me.Label1.Name = "Label1"
 		Me.Label1.Size = New System.Drawing.Size(16, 12)
 		Me.Label1.TabIndex = 2
@@ -81,14 +86,14 @@ Partial Class Main
 		'
 		'txtID
 		'
-		Me.txtID.Location = New System.Drawing.Point(12, 24)
+		Me.txtID.Location = New System.Drawing.Point(354, 26)
 		Me.txtID.Name = "txtID"
 		Me.txtID.Size = New System.Drawing.Size(115, 19)
 		Me.txtID.TabIndex = 3
 		'
 		'txtCode
 		'
-		Me.txtCode.Location = New System.Drawing.Point(12, 61)
+		Me.txtCode.Location = New System.Drawing.Point(354, 63)
 		Me.txtCode.Name = "txtCode"
 		Me.txtCode.Size = New System.Drawing.Size(115, 19)
 		Me.txtCode.TabIndex = 5
@@ -96,7 +101,7 @@ Partial Class Main
 		'Label2
 		'
 		Me.Label2.AutoSize = True
-		Me.Label2.Location = New System.Drawing.Point(12, 46)
+		Me.Label2.Location = New System.Drawing.Point(354, 48)
 		Me.Label2.Name = "Label2"
 		Me.Label2.Size = New System.Drawing.Size(31, 12)
 		Me.Label2.TabIndex = 4
@@ -104,7 +109,7 @@ Partial Class Main
 		'
 		'txtName
 		'
-		Me.txtName.Location = New System.Drawing.Point(12, 98)
+		Me.txtName.Location = New System.Drawing.Point(354, 100)
 		Me.txtName.Name = "txtName"
 		Me.txtName.Size = New System.Drawing.Size(206, 19)
 		Me.txtName.TabIndex = 7
@@ -112,7 +117,7 @@ Partial Class Main
 		'Label3
 		'
 		Me.Label3.AutoSize = True
-		Me.Label3.Location = New System.Drawing.Point(12, 83)
+		Me.Label3.Location = New System.Drawing.Point(354, 85)
 		Me.Label3.Name = "Label3"
 		Me.Label3.Size = New System.Drawing.Size(34, 12)
 		Me.Label3.TabIndex = 6
@@ -120,7 +125,7 @@ Partial Class Main
 		'
 		'txtNote
 		'
-		Me.txtNote.Location = New System.Drawing.Point(12, 135)
+		Me.txtNote.Location = New System.Drawing.Point(354, 137)
 		Me.txtNote.Name = "txtNote"
 		Me.txtNote.Size = New System.Drawing.Size(206, 19)
 		Me.txtNote.TabIndex = 9
@@ -128,7 +133,7 @@ Partial Class Main
 		'Label4
 		'
 		Me.Label4.AutoSize = True
-		Me.Label4.Location = New System.Drawing.Point(12, 120)
+		Me.Label4.Location = New System.Drawing.Point(354, 122)
 		Me.Label4.Name = "Label4"
 		Me.Label4.Size = New System.Drawing.Size(29, 12)
 		Me.Label4.TabIndex = 8
@@ -136,7 +141,7 @@ Partial Class Main
 		'
 		'btnUpd
 		'
-		Me.btnUpd.Location = New System.Drawing.Point(121, 160)
+		Me.btnUpd.Location = New System.Drawing.Point(463, 162)
 		Me.btnUpd.Name = "btnUpd"
 		Me.btnUpd.Size = New System.Drawing.Size(97, 23)
 		Me.btnUpd.TabIndex = 10
@@ -145,9 +150,9 @@ Partial Class Main
 		'
 		'btnSearch
 		'
-		Me.btnSearch.Location = New System.Drawing.Point(133, 9)
+		Me.btnSearch.Location = New System.Drawing.Point(254, 11)
 		Me.btnSearch.Name = "btnSearch"
-		Me.btnSearch.Size = New System.Drawing.Size(85, 71)
+		Me.btnSearch.Size = New System.Drawing.Size(85, 34)
 		Me.btnSearch.TabIndex = 11
 		Me.btnSearch.Text = "Search"
 		Me.btnSearch.UseVisualStyleBackColor = True
@@ -160,7 +165,7 @@ Partial Class Main
 		'
 		'btnClear
 		'
-		Me.btnClear.Location = New System.Drawing.Point(12, 160)
+		Me.btnClear.Location = New System.Drawing.Point(354, 162)
 		Me.btnClear.Name = "btnClear"
 		Me.btnClear.Size = New System.Drawing.Size(49, 23)
 		Me.btnClear.TabIndex = 12
@@ -175,18 +180,54 @@ Partial Class Main
 		'
 		'btnCancel
 		'
-		Me.btnCancel.Location = New System.Drawing.Point(67, 160)
+		Me.btnCancel.Location = New System.Drawing.Point(409, 162)
 		Me.btnCancel.Name = "btnCancel"
 		Me.btnCancel.Size = New System.Drawing.Size(49, 23)
 		Me.btnCancel.TabIndex = 13
 		Me.btnCancel.Text = "Cancel"
 		Me.btnCancel.UseVisualStyleBackColor = True
 		'
+		'txtSearchCode
+		'
+		Me.txtSearchCode.Location = New System.Drawing.Point(133, 26)
+		Me.txtSearchCode.Name = "txtSearchCode"
+		Me.txtSearchCode.Size = New System.Drawing.Size(115, 19)
+		Me.txtSearchCode.TabIndex = 17
+		'
+		'Label5
+		'
+		Me.Label5.AutoSize = True
+		Me.Label5.Location = New System.Drawing.Point(133, 11)
+		Me.Label5.Name = "Label5"
+		Me.Label5.Size = New System.Drawing.Size(31, 12)
+		Me.Label5.TabIndex = 16
+		Me.Label5.Text = "Code"
+		'
+		'txtSearchID
+		'
+		Me.txtSearchID.Location = New System.Drawing.Point(12, 26)
+		Me.txtSearchID.Name = "txtSearchID"
+		Me.txtSearchID.Size = New System.Drawing.Size(115, 19)
+		Me.txtSearchID.TabIndex = 15
+		'
+		'Label6
+		'
+		Me.Label6.AutoSize = True
+		Me.Label6.Location = New System.Drawing.Point(12, 11)
+		Me.Label6.Name = "Label6"
+		Me.Label6.Size = New System.Drawing.Size(16, 12)
+		Me.Label6.TabIndex = 14
+		Me.Label6.Text = "ID"
+		'
 		'Main
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(591, 196)
+		Me.ClientSize = New System.Drawing.Size(573, 198)
+		Me.Controls.Add(Me.txtSearchCode)
+		Me.Controls.Add(Me.Label5)
+		Me.Controls.Add(Me.txtSearchID)
+		Me.Controls.Add(Me.Label6)
 		Me.Controls.Add(Me.btnCancel)
 		Me.Controls.Add(Me.btnClear)
 		Me.Controls.Add(Me.btnSearch)
@@ -224,4 +265,8 @@ Partial Class Main
 	Friend WithEvents btnClear As System.Windows.Forms.Button
 	Friend WithEvents DataBinder2 As Moca.Demo.Win.Win.DataBinder
 	Friend WithEvents btnCancel As System.Windows.Forms.Button
+	Friend WithEvents txtSearchCode As System.Windows.Forms.TextBox
+	Friend WithEvents Label5 As System.Windows.Forms.Label
+	Friend WithEvents txtSearchID As System.Windows.Forms.TextBox
+	Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

@@ -54,6 +54,20 @@ Namespace Db.Impl
 			End Using
 		End Function
 
+		Public Sub [Mod](value As DemoEntity) Implements IDaoDemo.Mod
+			Const C_SQL As String = "UPDATE [tbDemo] SET [Name] = @Name ,[Note] = @Note WHERE [ID] = @ID AND [Code] = @Code"
+
+			Using cmd As IDbCommandUpdate = CreateCommandUpdate(C_SQL)
+				cmd.SetParameter("Name", value.Name)
+				cmd.SetParameter("Note", value.Note)
+				cmd.SetParameter("ID", value.ID)
+				cmd.SetParameter("Code", value.Code)
+
+				Dim rc As Integer
+				rc = cmd.Execute()
+			End Using
+		End Sub
+
 	End Class
 
 End Namespace

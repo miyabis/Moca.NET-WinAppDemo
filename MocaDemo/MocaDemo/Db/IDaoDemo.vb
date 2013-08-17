@@ -19,6 +19,9 @@ Namespace Db
 		<Transaction()>
 		Function Ins(ByVal value As DemoEntity) As Integer
 
+		<Transaction()>
+		Sub [Mod](ByVal value As DemoEntity)
+
 	End Interface
 
 End Namespace
