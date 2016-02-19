@@ -37,7 +37,7 @@ Partial Class Main
         Me.btnUpd = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.DataBinder2 = New Moca.Demo.Win.Win.DataBinder(Me.components)
+        Me.DataBinder1 = New Moca.Demo.Win.Win.DataBinder(Me.components)
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.txtSearchCode = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -167,9 +167,9 @@ Partial Class Main
         '
         'DataBinder2
         '
-        Me.DataBinder2.DataMember = ""
-        Me.DataBinder2.DataSource = Nothing
-        Me.DataBinder2.Position = -1
+        Me.DataBinder1.DataMember = ""
+        Me.DataBinder1.DataSource = Nothing
+        Me.DataBinder1.Position = -1
         '
         'btnCancel
         '
@@ -255,7 +255,7 @@ Partial Class Main
 	Friend WithEvents btnUpd As System.Windows.Forms.Button
 	Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents btnClear As System.Windows.Forms.Button
-	Friend WithEvents DataBinder2 As Moca.Demo.Win.Win.DataBinder
+	Friend WithEvents DataBinder1 As Moca.Demo.Win.Win.DataBinder
 	Friend WithEvents btnCancel As System.Windows.Forms.Button
 	Friend WithEvents txtSearchCode As System.Windows.Forms.TextBox
 	Friend WithEvents Label5 As System.Windows.Forms.Label
