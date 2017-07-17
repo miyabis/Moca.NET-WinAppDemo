@@ -159,22 +159,22 @@ Moca.NET では、データベースアクセスクラスを作成してアク�
 Moca.NET テンプレートの「**Entity クラス**」で作成します。  
 ウィザード形式で、接続先DBを選択しSQLステートメントを実行することでクラスを作成します。
 
-  ![Entityクラス作成](Images/entity01.png)
+  ![Entityクラス作成](Images/entity01.png)  
   名前は後でも指定できます。
 
-  ![Entityクラス作成](Images/entity02.png)
+  ![Entityクラス作成](Images/entity02.png)  
   「新しい接続」ボタンでテスト用DBへの接続情報を設定します。既に存在するときは選択してください。
 
-  ![Entityクラス作成](Images/entity03.png)
+  ![Entityクラス作成](Images/entity03.png)  
   データソースを指定します。
 
-  ![Entityクラス作成](Images/entity04.png)
+  ![Entityクラス作成](Images/entity04.png)  
   接続情報を指定します。
 
-  ![Entityクラス作成](Images/entity05.png)
+  ![Entityクラス作成](Images/entity05.png)  
   接続先とテーブルを選択します。SQL文を入力することもできます。
 
-  ![Entityクラス作成](Images/entity06.png)
+  ![Entityクラス作成](Images/entity06.png)  
   コードに出力する情報を指定します。
 
 ### Dao 作成
