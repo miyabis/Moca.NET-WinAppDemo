@@ -17,11 +17,16 @@ Namespace My
 	Partial Friend Class MyApplication
 
 		Private Sub MyApplication_Startup(sender As Object, e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
+			Moca.Win.WinUtil.ApplicationExceptionHandler(New ApplicationExceptionHandler)
+
+			' à√çÜâª
+			Moca.Configuration.SectionProtector.Protect()
+
 			' Mocaèâä˙âª
 			MocaContainerFactory.Init()
 		End Sub
 
-		Private Sub MyApplication_Shutdown(sender As Object, e As System.EventArgs) Handles Me.Shutdown
+        Private Sub MyApplication_Shutdown(sender As Object, e As System.EventArgs) Handles Me.Shutdown
 			' Mocaèâä˙âª
 			MocaContainerFactory.Destroy()
 		End Sub

@@ -1,27 +1,51 @@
 ﻿
+Imports Moca.Attr
 Imports Moca.Db.Attr
 
 Namespace Db
 
-	''' <summary>
-	''' tbMocaDemo データアクセスインタフェース
-	''' </summary>
-	''' <remarks></remarks>
-	<Dao("Moca.Demo.Db", GetType(Impl.DaoDemo))> _
- Public Interface IDaoDemo
+    ''' <summary>
+    ''' tbMocaDemo データアクセスインタフェース
+    ''' </summary>
+    ''' <remarks></remarks>
+    <Dao(Sys.C_CONNECTION_STRING, GetType(Impl.DaoDemo))>
+    Public Interface IDaoDemo
 
-		Function [Get]() As IList(Of DemoEntity)
+		''' <summary>
+		''' SELECT の文字列を実行するサンプル
+		''' </summary>
+		''' <param name="id"></param>
+		''' <returns></returns>
+		''' <remarks></remarks>
+		Function [Get](ByVal id As String) As IList(Of DemoRow)
 
-		Function [Get](ByVal id As String) As IList(Of DemoEntity)
+		''' <summary>
+		''' SELECT のストアドを実行するサンプル
+		''' </summary>
+		''' <param name="id"></param>
+		''' <param name="code"></param>
+		''' <returns></returns>
+		''' <remarks></remarks>
+		Function [Get](ByVal id As String, ByVal code As Integer) As IList(Of DemoRow)
 
-		Function [Get](ByVal id As String, ByVal code As Integer) As IList(Of DemoEntity)
-
+		''' <summary>
+		''' 更新系のストアドを実行するサンプル
+		''' </summary>
+		''' <param name="value"></param>
+		''' <returns></returns>
+		''' <remarks></remarks>
 		<Transaction()>
-		Function Ins(ByVal value As DemoEntity) As Integer
+		<Aspect(GetType(SQLStatementlogger))>
+		Function Ins(ByVal value As DemoRow) As Integer
 
+		''' <summary>
+		''' 更新系の文字列を実行するサンプル
+		''' </summary>
+		''' <param name="lst"></param>
+		''' <remarks></remarks>
 		<Transaction()>
-		Sub [Mod](ByVal value As DemoEntity)
+		Sub [Mod](ByVal lst As IList(Of DemoRow))
 
-	End Interface
+    End Interface
 
 End Namespace

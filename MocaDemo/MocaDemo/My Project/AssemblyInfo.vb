@@ -2,34 +2,34 @@
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
-' アセンブリに関する一般情報は以下の属性セットをとおして制御されます。 
-' アセンブリに関連付けられている情報を変更するには、
-' これらの属性値を変更してください。
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
 
-' アセンブリ属性の値を確認します。
+' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("MocaDemo")> 
-<Assembly: AssemblyDescription("Moca.NET Windows Demo")> 
+<Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("MiYABiS")> 
 <Assembly: AssemblyProduct("MocaDemo")> 
-<Assembly: AssemblyCopyright("Copyright ©  2013")> 
+<Assembly: AssemblyCopyright("Copyright © 2017 MiYABiS")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
-'このプロジェクトが COM に公開される場合、次の GUID がタイプ ライブラリの ID になります。
-<Assembly: Guid("b66e9534-26bd-4ad6-adca-54d3dae24461")> 
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("68246cea-8876-413f-88e1-eed909634ddd")> 
 
-' アセンブリのバージョン情報は、以下の 4 つの値で構成されています:
+' Version information for an assembly consists of the following four values:
 '
 '      Major Version
 '      Minor Version 
 '      Build Number
 '      Revision
 '
-' すべての値を指定するか、下のように '*' を使ってビルドおよびリビジョン番号を 
-' 既定値にすることができます:
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.5.0")> 
-<Assembly: AssemblyFileVersion("1.5.0")> 
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> 
